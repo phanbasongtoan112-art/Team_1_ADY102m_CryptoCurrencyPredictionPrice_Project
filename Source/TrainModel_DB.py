@@ -1,4 +1,3 @@
-# Vá lỗi Numpy cho phiên bản Python mới
 import numpy as np
 np.object = object
 np.typeDict = dict
@@ -93,3 +92,4 @@ plt.xlabel('Thời Gian')
 
 if __name__ == "__main__":
     train_and_predict_6_years()
+
