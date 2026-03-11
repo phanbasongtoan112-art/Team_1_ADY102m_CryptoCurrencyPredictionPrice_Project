@@ -40,6 +40,16 @@ def get_binance_data():
     df = pd.DataFrame(all_ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
 
+    # Tính toán các chỉ báo (RSI, MACD)
+    df["RSI"] = ta.rsi(df["close"], 14)
+    macd = ta.macd(df["close"])
+    if macd is not None:
+        df["MACD"] = macd.iloc[:, 0]
+
+    # Xóa các dòng có giá trị NaN do chỉ báo gây ra
+    df = df.dropna().reset_index(drop=True)
+
+
     
     # Lưu vào DATABASE SQLITE
     print(f"💾 Đang lưu vào {db_path} (bảng 'spot_ohlcv')...")
@@ -50,4 +60,5 @@ def get_binance_data():
 
 if __name__ == "__main__":
     get_binance_data()
+
 
