@@ -1,4 +1,3 @@
-# Vá lỗi Numpy cho phiên bản Python mới
 import numpy as np
 np.object = object
 np.typeDict = dict

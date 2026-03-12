@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# VÁ LỖI NUMPY CHO PYTHON MỚI
+>>>>>>> 503a5e176cc49ae8487fe31f514c5be596cf7274
 import numpy as np
 np.object = object
 np.typeDict = dict
@@ -32,7 +36,11 @@ menu = ["1. 📦 Tiền Xử Lý & Thống Kê (EDA)", "2. 🤖 Đánh Giá Mô 
 choice = st.sidebar.radio("Chọn bảng điều khiển:", menu)
 
 # ==========================================
+<<<<<<< HEAD
 # TAB 1: THỐNG KÊ MÔ TẢ & TIỀN XỬ LÝ
+=======
+# TAB 1: THỐNG KÊ MÔ TẢ & TIỀN XỬ LÝ (Dành cho Giảng Viên)
+>>>>>>> 503a5e176cc49ae8487fe31f514c5be596cf7274
 # ==========================================
 if choice == "1. 📦 Tiền Xử Lý & Thống Kê (EDA)":
     st.header("📦 Thống Kê Mô Tả Dữ Liệu (Descriptive Statistics)")
@@ -115,4 +123,8 @@ elif choice == "3. 📈 Trực Quan Hóa (Biểu Đồ)":
         st.warning("⚠️ Hãy đảm bảo bạn đã chạy cả 2 file Thu thập và Train model!")
 
 st.sidebar.markdown("---")
+<<<<<<< HEAD
 st.sidebar.info("💡 **Ghi chú báo cáo:** Dữ liệu đã được áp dụng Min-Max Scaler trong quá trình Train AI.")
+=======
+st.sidebar.info("💡 **Ghi chú báo cáo:** Dữ liệu đã được áp dụng Min-Max Scaler trong quá trình Train AI.")
+>>>>>>> 503a5e176cc49ae8487fe31f514c5be596cf7274
